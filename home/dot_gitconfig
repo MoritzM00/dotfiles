@@ -1,0 +1,19 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Moritz Mistol
+	email = moritz.mistol@gmail.com
+[core]
+	excludesfile = /Users/moritzmistol/.gitignore_global
+  editor = lvim
+[init]
+	defaultBranch = main
+[diff]
+  tool = nvimdiff
+[difftool "nvimdiff"]
+  cmd = "lvim -d \"$LOCAL\" \"$REMOTE\""
+[mergetool "lvim"]
+  cmd = lvim -f -c \"Gdiffsplit!\" \"$MERGED\"
+[merge]
+  tool = lvim
+[mergetool]
+  prompt = true
