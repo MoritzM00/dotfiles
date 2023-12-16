@@ -43,7 +43,6 @@ brew update
      "visual-studio-code"
      "whatsapp" 
      "font-menlo-for-powerline" -}}
-{{ end -}}
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
 {{ range ($brews | sortAlpha | uniq) -}}

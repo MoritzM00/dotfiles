@@ -135,7 +135,7 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #export PATH="/opt/homebrew/opt/python3/bin:$PATH"
 
 export PATH="/opt/homebrew/sbin:$PATH"
-export HOMEBREW_GITHUB_API_TOKEN={{ dashlane}}
+export HOMEBREW_GITHUB_API_TOKEN={{ dashlaneNote "title=homebrew_github_api_token" }}
 export PATH=~/.local/bin:$PATH
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
