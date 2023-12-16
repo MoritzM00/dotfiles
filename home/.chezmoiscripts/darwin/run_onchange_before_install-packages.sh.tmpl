@@ -1,0 +1,53 @@
+#!/bin/bash
+
+set -eufo pipefail
+
+brew update
+
+{{ $brews := list
+     "bat"
+     "bash"
+     "curl"
+     "eza"
+     "fd"
+     "gdu"
+     "gh"
+     "git"
+     "node"
+     "tmux"
+     "python3"
+     "thefuck"
+     "tlrc"
+     "vim"
+     "pyenv"
+     "pyenv-virtualenv"
+     "zsh"
+     "zsh-autosuggestions"
+     "zsh-syntax-highlighting"
+     "zsh-completions"
+     "cookiecutter"
+     "btop"
+     "tree"
+     "dashlane/tap/dashlane-cli"
+     "wget" -}}
+{{ $casks := list
+     "google-chrome"
+     "alfred"
+     "rectangle"
+     "google-earth-pro"
+     "microsoft-teams"
+     "iterm2"
+     "spotify"
+     "zoom"
+     "visual-studio-code"
+     "whatsapp" -}}
+{{ end -}}
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
+{{ range ($brews | sortAlpha | uniq) -}}
+brew "{{ . }}"
+{{ end -}}
+{{ range ($casks | sortAlpha | uniq) -}}
+cask "{{ . }}"
+{{ end -}}
+EOF
