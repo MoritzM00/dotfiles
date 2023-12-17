@@ -1,9 +1,6 @@
 #!/bin/bash
 
-git config --global user.name "Moritz Mistol"
-git config --global user.email "moritz.mistol@gmail.com"
-git config --global github.user "MoritzM00"
-
+sudo softwareupate
 xcode-select --install
 
 # install homebrew if it does not exist
@@ -13,11 +10,22 @@ else
     # Install Homebrew
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
+# if oh my zsh is not installed, install it
+if [ -d "$HOME/.oh-my-zsh" ] 
+then
+    echo "oh-my-zsh is already installed."
+else
+    echo "Installing oh-my-zsh..."
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 
-echo "Installing oh-my-zsh..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-echo "Installing powerlevel10k..."
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+# if powerlevel10k is not installed, install it
+if [ -d "$HOME/.oh-my-zsh/custom/themes/powerlevel10k" ] 
+then
+    echo "powerlevel10k is already installed."
+else
+    echo "Installing powerlevel10k..."
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+fi
 
 

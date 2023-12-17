@@ -2,6 +2,8 @@
 
 set -eufo pipefail
 
+echo "Installing Brew Packages and Casks..."
+
 {{ $taps := list
      "homebrew/cask-fonts"
      "homebrew/cask"
@@ -31,7 +33,6 @@ set -eufo pipefail
      "cookiecutter"
      "btop"
      "tree"
-     "miniforge"
      "dashlane/tap/dashlane-cli"
      "wget" -}}
 {{ $casks := list
@@ -44,7 +45,8 @@ set -eufo pipefail
      "spotify"
      "zoom"
      "visual-studio-code"
-     "whatsapp" 
+     "whatsapp"
+     "miniforge"
      "font-menlo-for-powerline" -}}
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
