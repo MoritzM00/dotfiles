@@ -1,0 +1,19 @@
+[user]
+	name = Moritz Mistol
+	email = {{ .email }}
+[core]
+	excludesfile = ~/.gitignore_global
+  editor = vim
+[init]
+	defaultBranch = main
+[color]
+  ui = auto
+
+{{- $ghPath := lookPath "gh" }}
+{{- if $ghPath }}
+[credential "https://github.com"]
+	helper = !{{ $ghPath }} auth git-credential
+[credential "https://gist.github.com"]
+	helper = !{{ $ghPath }} auth git-credential
+{{- end }}
+
