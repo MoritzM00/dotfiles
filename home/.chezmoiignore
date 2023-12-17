@@ -1,4 +1,4 @@
 .oh-my-zsh/cache/**
 .oh-my-zsh/custom/themes/powerlevel10k/**/*.zwc
 
-dot_config/iterm2/com.googlecode.iterm2.plist
+com.googlecode.iterm2.plist
