@@ -1,0 +1,5 @@
+github.com:
+    user: MoritzM00
+    git_protocol: ssh
+    users:
+        MoritzM00: {git_protocol: ssh}
