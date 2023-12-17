@@ -44,7 +44,13 @@ echo "Installing Brew Packages and Casks..."
      "zoom"
      "visual-studio-code"
      "miniforge"
-     "font-menlo-for-powerline" -}}
+     "font-menlo-for-powerline"
+     "font-hack-nerd-font"
+     "font-jetbrains-mono"
+     "font-jetbrains-mono-nerd-font"
+     "font-fira-mono-for-powerline"
+     "font-fira-code"
+     "font-fira-code-nerd-font" -}}
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
 {{ range ($taps | sortAlpha | uniq) -}}

@@ -1,5 +1,11 @@
 # My Dotfiles, managed with Chezmoi
 
+Bootstrap new Mac by executing
+
+```bash
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply MoritM00
+```
+
 ## Installation
 
 1. Install homebrew
@@ -22,3 +28,7 @@
    ```
 
 4. Run `chezmoi init MoritM00`
+
+## Manual Installations
+
+1. Install [EURKey](https://github.com/jonasdiemer/EurKEY-Mac) (needs restart)
