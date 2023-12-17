@@ -12,6 +12,8 @@ osascript -e 'tell application "System Preferences" to quit'
 ###############################################################################
 # General                                                                     
 ###############################################################################
+echo "Setting General preferences..."
+
 defaults write NSGlobalDomain AppleInterfaceStyle Dark
 defaults write NSGlobalDomain AppleLanguages -array "en" "de"
 defaults write NSGlobalDomain AppleLocale de_DE
@@ -27,6 +29,7 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 ###############################################################################
 # Dock                                                                      
 ###############################################################################
+echo "Setting Dock preferences..."
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
@@ -52,6 +55,7 @@ defaults write com.apple.dock wvous-br-modifier -int 0
 ###############################################################################
 # Finder                                                                      
 ###############################################################################
+echo "Setting Finder preferences..."
 
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
 defaults write com.apple.finder QuitMenuItem -bool true
@@ -81,10 +85,3 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-
-
-###############################################################################
-# Iterm2                                                                      
-###############################################################################
-# Don’t display the annoying prompt when quitting iTerm
-defaults write com.googlecode.iterm2 PromptOnQuit -bool false
