@@ -10,5 +10,11 @@ else
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+# install EurKey Keyboard layout
+echo "Downloading EurKEY keyboard layout. (Requires restart by user)"
+wget https://github.com/jonasdiemer/EurKEY-Mac/raw/master/EurKEY.icns
+wget https://github.com/jonasdiemer/EurKEY-Mac/raw/master/EurKEY.keylayout
+sudo mv EurKEY.icns EurKEY.keylayout "/Library/Keyboard Layouts/"
+
 
 

@@ -31,4 +31,5 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply MoritM00
 
 ## Manual Installations
 
-1. Install [EURKey](https://github.com/jonasdiemer/EurKEY-Mac) (needs restart)
+1. Activate EurKEY Layout:
+   After the restart go to `System Settings` > `Keyboard` > `Edit` > `+` and search for `EurKEY v1.2`. After adding the layout select its symbol from the menu bar icon.
