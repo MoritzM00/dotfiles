@@ -3,17 +3,7 @@
 	name = Moritz Mistol
 	email = moritz.mistol@gmail.com
 [core]
-	excludesfile = /Users/moritzmistol/.gitignore_global
-  editor = lvim
+	excludesfile = ~/.gitignore_global
+  editor = vim
 [init]
 	defaultBranch = main
-[diff]
-  tool = nvimdiff
-[difftool "nvimdiff"]
-  cmd = "lvim -d \"$LOCAL\" \"$REMOTE\""
-[mergetool "lvim"]
-  cmd = lvim -f -c \"Gdiffsplit!\" \"$MERGED\"
-[merge]
-  tool = lvim
-[mergetool]
-  prompt = true
