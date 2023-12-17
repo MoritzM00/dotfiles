@@ -1,6 +1,5 @@
 #!/bin/bash
 
-sudo softwareupate
 xcode-select --install
 
 # install homebrew if it does not exist
