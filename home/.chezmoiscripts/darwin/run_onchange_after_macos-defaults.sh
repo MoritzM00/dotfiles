@@ -32,7 +32,7 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 echo "Setting Dock preferences..."
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
-defaults write com.apple.dock autohide-time-modifier -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0.3
 defaults write com.apple.dock launchanim -bool false
 defaults write com.apple.dock orientation left
 defaults write com.apple.dock show-recents -bool false
@@ -86,7 +86,13 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 ###############################################################################
 # iTerm2                                                                      
 ###############################################################################
+echo "Configure iTerm2 preferences..."
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${HOME}/.config/iterm2"
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+
+echo "Done. Restarting affected apps..."
+for app in "Dock" "Finder"; do
+  killall "${app}" &> /dev/null
+done
