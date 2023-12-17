@@ -1,6 +1,11 @@
+{{- $email := promptStringOnce . "email" "Email address" -}}
+
 [diff]
     exclude = ["scripts"]
     
 [data]
     email = "{{ .email }}"
-    editor = "code --wait"
+
+[edit]
+    command = "code"
+    args = ["--wait" ]
