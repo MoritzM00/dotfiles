@@ -9,3 +9,12 @@
 [edit]
     command = "code"
     args = ["--wait" ]
+
+[merge]
+    command = "code"
+    args = ["-wait", 
+            "--merge", 
+            "{{ "{{" }} .Destination {{ "}}" }}",
+            "{{ "{{" }} .Source {{ "}}" }}",
+            "{{ "{{" }} .Target {{ "}}" }}",
+    ]
