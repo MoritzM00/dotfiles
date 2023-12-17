@@ -81,3 +81,12 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+
+
+###############################################################################
+# iTerm2                                                                      
+###############################################################################
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${HOME}/.config/iterm2"
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
