@@ -29,6 +29,7 @@ else
     sudo mv EurKEY.icns EurKEY.keylayout "/Library/Keyboard Layouts/"
 fi
 
-
-
+# install NVM
+echo "Installing NVM"
+PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash'
 
