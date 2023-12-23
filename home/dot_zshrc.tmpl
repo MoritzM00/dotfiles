@@ -105,8 +105,7 @@ export LANG=en_US.UTF-8
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-EDITOR="vim"
+EDITOR="nvim"
 alias ls=eza
 alias cat=bat
 
@@ -132,7 +131,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#export PATH="/opt/homebrew/opt/python3/bin:$PATH"
 
 export PATH="/opt/homebrew/sbin:$PATH"
 export HOMEBREW_GITHUB_API_TOKEN={{ dashlaneNote "title=homebrew_github_api_token" }}
