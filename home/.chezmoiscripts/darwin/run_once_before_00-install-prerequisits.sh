@@ -1,6 +1,5 @@
 #!/bin/bash
 
-xcode-select --install
 
 # install homebrew if it does not exist
 if command -v brew &> /dev/null; then
