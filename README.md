@@ -1,6 +1,15 @@
 # My Dotfiles, managed with Chezmoi
 
-Bootstrap a brand new Mac by executing
+These dotfiles target MacOS only.
+
+First, update the system and install xcode command line tools:
+
+```bash
+sudo softwareupdate -i -a
+xcode-select --install
+```
+
+Then Bootstrap the Mac by executing
 
 ```bash
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply MoritzM00
