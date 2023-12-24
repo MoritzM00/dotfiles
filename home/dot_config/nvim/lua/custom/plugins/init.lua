@@ -6,7 +6,16 @@ return {
 	{
 		"zbirenbaum/copilot.lua",
 		event = "InsertEnter",
-		opts = {}
+		opts = {
+			suggestion = { autotrigger = true },
+			filetypes = {
+				yaml = true,
+				markdown = true,
+				python = true,
+				rust = true,
+				lua = true
+			}
+		}
 	},
 	{
 		"windwp/nvim-autopairs",
