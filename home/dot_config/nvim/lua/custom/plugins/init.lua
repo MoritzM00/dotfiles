@@ -7,7 +7,7 @@ return {
 		"zbirenbaum/copilot.lua",
 		event = "InsertEnter",
 		opts = {
-			suggestion = { autotrigger = true },
+			suggestion = { auto_trigger = true },
 			filetypes = {
 				yaml = true,
 				markdown = true,
