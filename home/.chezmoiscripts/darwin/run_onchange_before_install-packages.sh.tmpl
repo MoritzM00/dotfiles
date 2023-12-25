@@ -6,6 +6,7 @@ echo "Installing Brew Packages and Casks..."
 
 {{ $taps := list
      "homebrew/cask-fonts"
+     "dashlane/tap"
      "homebrew/bundle" -}}
 
 {{ $brews := list
@@ -33,7 +34,7 @@ echo "Installing Brew Packages and Casks..."
      "cookiecutter"
      "btop"
      "tree"
-     "dashlane/tap/dashlane-cli"
+     "dashlane-cli"
      "wget" -}}
 {{ $casks := list
      "alfred"
