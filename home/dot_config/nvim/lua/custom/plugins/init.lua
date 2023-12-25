@@ -7,7 +7,14 @@ return {
 		"zbirenbaum/copilot.lua",
 		event = "InsertEnter",
 		opts = {
-			suggestion = { auto_trigger = true },
+			suggestion = {
+				auto_trigger = true,
+				keymap = {
+					accept = "<C-l>",
+					next = "<C-j>",
+					prev = "<C-k>",
+				}
+			},
 			filetypes = {
 				yaml = true,
 				markdown = true,
