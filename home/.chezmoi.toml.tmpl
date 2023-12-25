@@ -4,4 +4,4 @@
     exclude = ["scripts"]
     
 [data]
-    email = "{{ .email }}"
+    email = {{ $email | quote }} 
