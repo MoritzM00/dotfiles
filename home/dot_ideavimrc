@@ -1,1 +1,15 @@
 source ~/.vimrc
+
+"""" Idea specific settings
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+"""" Mappings
+map <leader>rn <Action>(RenameElement)
+
+" Window
+nnoremap <leader>wv :vsplit<CR>
+nnoremap <leader>ws :split<CR>
+
+nnoremap <leader>rt <Action>(Refactorings.QuickListPopupAction<CR>)
