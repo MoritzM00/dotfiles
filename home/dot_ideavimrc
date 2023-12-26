@@ -12,4 +12,14 @@ map <leader>rn <Action>(RenameElement)
 nnoremap <leader>wv :vsplit<CR>
 nnoremap <leader>ws :split<CR>
 
-nnoremap <leader>rt <Action>(Refactorings.QuickListPopupAction<CR>)
+" Navigation
+nmap <leader>sf <Action>(GotoFile)
+nmap <leader>ff <Action>(FindInPath)
+
+nmap <leader>ge <Action>(GotoNextError)
+nmap <leader>gI <Action>(GotoImplementation)
+nmap <leader>gD <Action>(GotoDeclaration)
+nmap <leader>se <Action>(ShowErrorDescription)
+
+nmap <leader>rf <Action>(ReformatCode)
+
