@@ -6,13 +6,12 @@ syntax on
 let mapleader=" "
 
 set visualbell
+set termguicolors
+set clipboard+=unnamedplus
 
 " Show line numbers
 set number
 set relativenumber
-
-" Show file stats
-set ruler
 
 " Encoding
 set encoding=utf-8
@@ -35,16 +34,17 @@ nnoremap k gk
 set showmode
 set showcmd
 
-" Searching
-nnoremap / /\v
-vnoremap / /\v
-set hlsearch
-set incsearch
+set ignorecase
 set smartcase
+
+set nohlsearch
+set incsearch
 set showmatch
 
-map <leader><space> :let @/=''<cr> " clear search
+" Center Screen when using C-d and C-u
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
 
-
-" Formatting
-map <leader>q gqip
+" similar to the above, but for n and N
+nnoremap n nzzzv
+nnoremap N Nzzzv

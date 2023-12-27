@@ -1,25 +1,61 @@
 source ~/.vimrc
 
+Plug "tpope/vim-surround"
+Plug "tpope/vim-commentary"
+Plug "machakann/vim-highlightedyank"
+
+
 """" Idea specific settings
 set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
 
 """" Mappings
-map <leader>rn <Action>(RenameElement)
+nmap <C-+> <Action>(ActivateTerminalToolWindow)
+
+" Popup navigation
+nmap <c-j> <Action>(PopupMenu-selectnext)
+nmap <c-k> <Action>(PopupMenu-selectprev)
+
+" Refactoring
+nmap <leader>rt <Action>(Refactorings.QuickListPopupAction)
+nmap <leader>rn <Action>(RenameElement)
+nmap <leader>rf <Action>(ReformatCode)
+
 
 " Window
 nnoremap <leader>wv :vsplit<CR>
 nnoremap <leader>ws :split<CR>
 
-" Navigation
+" Search
 nmap <leader>sf <Action>(GotoFile)
-nmap <leader>ff <Action>(FindInPath)
+nmap <leader>se <Action>(SearchEverywhere)
+nmap <leader>sa <Action>(GotoAction)
+nmap <leader>ss <Action>(GotoSymbol)
+nmap <leader>st <Action>(FindInPath)
+nmap <leader>su <Action>(FindUsages)
+nmap <leader>sr <Action>(ReplaceInPath)
 
+" Navigation
 nmap <leader>ge <Action>(GotoNextError)
+nmap <leader>gE <Action>(GotoPreviousError)
+nmap <leader>gC <Action>(GotoClass)
 nmap <leader>gI <Action>(GotoImplementation)
 nmap <leader>gD <Action>(GotoDeclaration)
-nmap <leader>se <Action>(ShowErrorDescription)
 
-nmap <leader>rf <Action>(ReformatCode)
+""" Bookmarks
+nmap <leader>bb <Action>(ToggleBookmark)
+nmap <leader>be <Action>(EditBookmark)
+nmap <leader>bt <Action>(ActivateBookmarksToolWindow)
+nmap <leader>bm <Action>(Bookmarks)
+nmap <leader>bn <Action>(GotoNextBookmark)
+nmap <leader>bp <Action>(GotoPreviousBookmark)
+nmap <leader>bs <Action>(ShowBookmarks)
 
+" Misc
+nmap <leader>a <Action>(ShowIntentionActions)
+nmap <leader>w <Action>(SaveAll)
+nmap <leader>q <Action>(CloseContent)
+nmap <leader>e <Action>(ShowErrorDescription)
+" Quick definition
+nmap <leader>qd <Action>(QuickImplementions)
