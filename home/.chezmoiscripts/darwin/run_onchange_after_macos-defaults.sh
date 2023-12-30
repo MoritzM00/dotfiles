@@ -20,8 +20,8 @@ defaults write NSGlobalDomain AppleLocale de_DE
 defaults write NSGlobalDomain InitialKeyRepeat -int 25
 defaults write NSGlobalDomain KeyRepeat -int 6
 defaults write -g ApplePressAndHoldEnabled -bool false
-# Disable "natural" scroll
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
