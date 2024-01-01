@@ -1,0 +1,7 @@
+channels:
+  - conda-forge
+  - nodefaults
+
+always_yes: true
+
+auto_activate_base: false
