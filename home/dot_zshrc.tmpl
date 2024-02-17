@@ -146,6 +146,7 @@ eval "$(pyenv init -)"
 export PIPX_DEFAULT_PYTHON=$(which python)
 
 eval $(thefuck --alias)
+eval $(zoxide init --cmd cd zsh)
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
