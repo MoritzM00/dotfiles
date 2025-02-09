@@ -1,4 +1,8 @@
-host github.com
+Host uc2.scc.kit.edu
+  HostName uc2.scc.kit.edu
+  User usort
+
+Host github.com
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/id_ed25519
