@@ -1,3 +1,13 @@
+Host i14s35.cvhci.iar.kit.edu
+  HostName i14s35.cvhci.iar.kit.edu
+  PubkeyAuthentication no
+  User mmistol
+
+Host i14s48.cvhci.iar.kit.edu
+  HostName i14s48.cvhci.iar.kit.edu
+  PubkeyAuthentication no
+  User mmistol
+
 Host uc2.scc.kit.edu
   HostName uc2.scc.kit.edu
   User usort
