@@ -1,3 +1,8 @@
+Host i14pc116.cvhci.iar.kit.edu
+  HostName i14pc116.cvhci.iar.kit.edu
+  PubkeyAuthentication no
+  User mmistol
+
 Host i14s35.cvhci.iar.kit.edu
   HostName i14s35.cvhci.iar.kit.edu
   PubkeyAuthentication no
